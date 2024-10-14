@@ -1,95 +1,223 @@
+'use client'
+
+import * as React from 'react';
 import Image from "next/image";
-import styles from "./page.module.css";
+import { styled } from '@mui/material/styles';
+import AppBar from "./components/AppBar";
+import ImageSlider from "./components/ImageSlider";
+import ToolBar from "./components/ToolBar";
+import Paper from '@mui/material/Paper';
+import { Button, Container, Divider, Grid, Typography, colors } from "@mui/material";
+import { makeStyles } from '@material-ui/core';
+import theme from '@/theme';
+import NewsTab from './components/ProductsTab';
+import Certification from './components/Certification';
+import Footer from './components/Footer';
+
+const Item = styled(Paper)(({ theme }) => ({
+  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+  ...theme.typography.body2,
+  padding: theme.spacing(1),
+  textAlign: 'left',
+  color: theme.palette.text.secondary,
+}));
+
+const useStyles = makeStyles({
+  Container: {
+    marginTop: 5,
+  },
+  hiddenBorderItem: {
+    boxShadow: 'none',
+    backgroundColor: 'transparent',
+  },
+  divider: {
+    width: '4rem',
+  },
+  title: {
+    color: theme.palette.primary.main,
+  },
+  date: {
+    color: theme.palette.secondary.main
+  },
+  certification: {
+    display: 'flex',
+    marginTop: 10,
+    marginBottom: 10,
+    backgroundImage: 'url(/images/Group-403-min.jpg)',
+    minHeight: 'auto',
+    width: '100%',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
+    '& > *': {
+      padding: 40,
+      width: '100%',
+      height: '100%',
+      color: theme.palette.primary.light,
+    },
+  },
+  new: {
+    marginTop: 15,
+    alignItems: 'center',
+  }
+});
 
 export default function Home() {
+  const classes = useStyles();
+
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
+    <main>
+      <AppBar />
+      <div>
+        <ToolBar/>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      {/* Body */}
+      {/* Event */}
+      <div >
+        <Container fixed sx={{ marginTop: 5 }}>
+          <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+            <Grid item xs={2} sm={4} md={4} key={1}>
+              <Item className={classes.hiddenBorderItem}>
+                <Typography variant='h5' component="div" align="left" color='#FF0D09'>
+                  SỰ KIỆN NỔI BẬT
+                </Typography>
+                <br/>
+                <Divider variant='fullWidth' className={classes.divider} sx={{ backgroundColor: theme.palette.primary.main, borderBottomWidth: 3 }}/>
+              </Item>
+            </Grid>
+            <Grid item xs={2} sm={4} md={4} key={2}>
+            <Item className={classes.hiddenBorderItem}>
+                <Typography variant="overline" component="div" align="left" color='#171717' fontSize={10}>
+                  Với hơn 50 năm thành lập, CÔNG TY CỔ PHẦN LILAMA 
+                  69-2 hoạt động chủ yếu trong các lĩnh vực:
+                </Typography>
+              </Item>
+              <br/>
+            </Grid>
+            <Grid item xs={2} sm={4} md={4} key={3}>
+              <Item className={classes.hiddenBorderItem}>
+              </Item>
+            </Grid>
+            <Grid item xs={2} sm={4} md={4} key={4}>
+              <Item>
+                <Typography variant="subtitle2" component="div" align="left" className={classes.title}>
+                  Lilama 69-2 báo cáo quản trị 6 tháng đầu năm 2024
+                </Typography>
+                <Typography variant="caption" component="div" align="left" className={classes.date}>
+                  30 Tháng Bảy, 2024
+                </Typography>
+                <Divider variant='fullWidth' className={classes.divider}/>
+                <Typography variant="caption" component="div" align="left">
+                  [...]
+                </Typography>
+                <br/>
+                <div>
+                  <Button variant="contained" color="primary" size='small'>
+                    Xem Thêm
+                  </Button>
+                </div>
+              </Item>
+            </Grid>
+            <Grid item xs={2} sm={4} md={4} key={5}>
+              <Item>
+                <Typography variant="subtitle2"component="div" align="left" className={classes.title}>
+                  Lilama 69-2 báo cáo quản trị 6 tháng đầu năm 2024
+                </Typography>
+                <Typography variant="caption" component="div" align="left" className={classes.date}>
+                  30 Tháng Bảy, 2024
+                </Typography>
+                <Divider variant='fullWidth' className={classes.divider}/>
+                <Typography variant="caption" component="div" align="left">
+                  [...]
+                </Typography>
+                <br/>
+                <Button variant="contained" color="primary" size='small'>
+                  Xem Thêm
+                </Button>
+              </Item>
+            </Grid>
+            <Grid item xs={2} sm={4} md={4} key={6}>
+              <Item>
+                <Typography variant="subtitle2"component="div" align="left" className={classes.title}>
+                  Lilama 69-2 báo cáo quản trị 6 tháng đầu năm 2024
+                </Typography>
+                <Typography variant="caption" component="div" align="left" className={classes.date}>
+                  30 Tháng Bảy, 2024
+                </Typography>
+                <Divider variant='fullWidth' className={classes.divider}/>
+                <Typography variant="caption" component="div" align="left">
+                  [...]
+                </Typography>
+                <br/>
+                <Button variant="contained" color="primary" size='small'>
+                  Xem Thêm
+                </Button>
+              </Item>
+            </Grid>
+            <Grid item xs={2} sm={4} md={4} key={7}>
+              <Item>
+                <Typography variant="subtitle2"component="div" align="left" className={classes.title}>
+                  Lilama 69-2 báo cáo quản trị 6 tháng đầu năm 2024
+                </Typography>
+                <Typography variant="caption" component="div" align="left" className={classes.date}>
+                  30 Tháng Bảy, 2024
+                </Typography>
+                <Divider variant='fullWidth' className={classes.divider}/>
+                <Typography variant="caption" component="div" align="left">
+                  [...]
+                </Typography>
+                <br/>
+                <Button variant="contained" color="primary" size='small'>
+                  Xem Thêm
+                </Button>
+              </Item>
+            </Grid>
+            <Grid item xs={2} sm={4} md={4} key={8}>
+              <Item>
+                <Typography variant="subtitle2"component="div" align="left" className={classes.title}>
+                  Lilama 69-2 báo cáo quản trị 6 tháng đầu năm 2024
+                </Typography>
+                <Typography variant="caption" component="div" align="left" className={classes.date}>
+                  30 Tháng Bảy, 2024
+                </Typography>
+                <Divider variant='fullWidth' className={classes.divider}/>
+                <Typography variant="caption" component="div" align="left">
+                  [...]
+                </Typography>
+                <br/>
+                <Button variant="contained" color="primary" size='small'>
+                  Xem Thêm
+                </Button>
+              </Item>
+            </Grid>
+            <Grid item xs={2} sm={4} md={4} key={9}>
+              <Item>
+                <Typography variant="subtitle2" component="div" align="left" className={classes.title}>
+                  Lilama 69-2 báo cáo quản trị 6 tháng đầu năm 2024
+                </Typography>
+                <Typography variant="caption" component="div" align="left" className={classes.date}>
+                  30 Tháng Bảy, 2024
+                </Typography>
+                <Divider variant='fullWidth' className={classes.divider}/>
+                <Typography variant="caption" component="div" align="left">
+                  [...]
+                </Typography>
+                <br/>
+                <Button variant="contained" color="primary" size='small'>
+                  Xem Thêm
+                </Button>
+              </Item>
+            </Grid>
+          </Grid>
+        </Container>
       </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      {/* Certification */}
+      <Certification />
+      {/* News */}
+      <div className={classes.new} key={'newsTab'}>
+        <NewsTab key={'newsTab'}/>
       </div>
+      {/* Footer */}
+      <Footer />
     </main>
   );
 }
