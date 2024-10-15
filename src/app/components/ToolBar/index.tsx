@@ -5,7 +5,7 @@ import Image from "next/image";
 import Image1 from "../../../../public/images/Group-9-min-1.png";
 import Image2 from "../../../../public/images/Group-13-min-1.png";
 import Image3 from "../../../../public/images/Group-15-min.png";
-import { makeStyles } from "@material-ui/core";
+import { makeStyles } from '@mui/styles';
 import ImageSlider from "../ImageSlider";
 
 

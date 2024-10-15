@@ -9,7 +9,7 @@ import AppBar from '@/app/components/AppBar';
 import theme from '@/theme';
 import { experimentalStyled as styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
-import { makeStyles } from '@material-ui/core';
+import { makeStyles } from '@mui/styles';
 import Image from "next/image";
 import { useRouter } from 'next/navigation'
 
@@ -46,8 +46,7 @@ const Page = () => {
   const router = useRouter()
 
   const handleClick = (url: string) => {
-    let redirectUrl = "http://localhost:3000/cong-trinh/" + url
-    console.log("redirectUrl", redirectUrl)
+    let redirectUrl = "/cong-trinh/" + url
     router.push(redirectUrl)
   };
 

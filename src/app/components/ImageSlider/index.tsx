@@ -1,9 +1,8 @@
-import { Box, Container } from "@mui/material";
+import { Box, Container, Slide } from "@mui/material";
 import Arrow from "./Arrow";
-import { makeStyles } from '@material-ui/core';
+import { makeStyles } from '@mui/styles';
 import { useState } from "react";
 import CarouselSlide from "./CarouseSlide";
-import { Slide } from '@material-ui/core';
 
 const useStyles = makeStyles({
   sliderWrapper: {

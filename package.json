@@ -9,18 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@emotion/cache": "^11.13.1",
-    "@emotion/react": "^11.13.0",
-    "@emotion/styled": "^11.13.0",
-    "@material-ui/core": "^4.12.4",
-    "@mui/icons-material": "^5.16.7",
-    "@mui/material": "^5.16.7",
-    "@mui/material-nextjs": "^5.16.6",
-    "@mui/styled-engine-sc": "^6.0.0-alpha.18",
     "next": "14.2.5",
     "react": "^18",
     "react-dom": "^18",
-    "styled-components": "^6.1.12"
+    "styled-components": "^6.1.12",
+    "@emotion/cache": "latest",
+    "@emotion/react": "latest",
+    "@emotion/server": "latest",
+    "@emotion/styled": "latest",
+    "@mui/icons-material": "latest",
+    "@mui/material": "latest",
+    "@mui/material-nextjs": "latest",
+    "@mui/styles": "latest"
   },
   "devDependencies": {
     "@types/node": "^20",

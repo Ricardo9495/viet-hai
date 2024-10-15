@@ -8,7 +8,7 @@ import Footer from '@/app/components/Footer';
 import AppBar from '@/app/components/AppBar';
 import theme from '@/theme';
 import Paper from '@mui/material/Paper';
-import { makeStyles } from '@material-ui/core';
+import { makeStyles } from '@mui/styles';
 
 
 const useStyles = makeStyles({

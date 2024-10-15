@@ -2,7 +2,7 @@
 import * as React from 'react';
 import Image from "next/image";
 import theme from '@/theme';
-import { makeStyles } from '@material-ui/core';
+import { makeStyles } from '@mui/styles';
 import { Paper, Typography, Divider, Grid, Container } from '@mui/material';
 
 const useStyles = makeStyles({

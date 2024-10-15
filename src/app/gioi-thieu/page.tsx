@@ -7,7 +7,7 @@ import Image from "next/image";
 import ToolBar from '@/app/components/ToolBar';
 import { Container, Grid, Paper, Typography, Divider, Button } from '@mui/material';
 import theme from '@/theme';
-import { makeStyles } from '@material-ui/core';
+import { makeStyles } from '@mui/styles';
 import Certification from '../components/Certification';
 import Footer from '../components/Footer';
 

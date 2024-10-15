@@ -27,15 +27,15 @@ type Page = {
 const pages: Page[] = [
   {
     title: 'Giới Thiệu',
-    url: 'http://localhost:3000/gioi-thieu',
+    url: '/gioi-thieu',
   },
   {
     title: 'Sản Phẩm',
-    url: 'http://localhost:3000/san-pham',
+    url: '/san-pham',
   },
   {
     title: 'Công Trình',
-    url: 'http://localhost:3000/cong-trinh',
+    url: '/cong-trinh',
   },
   
 ];
@@ -64,14 +64,14 @@ function ResponsiveAppBar() {
               height={110}
               width={140}
               quality={100}
-              onClick={() => handleCloseNavMenu("http://localhost:3000")}
+              onClick={() => handleCloseNavMenu("/")}
               alt="Picture of the author"
              />
           <Typography
             variant="h6"
             noWrap
             component="a"
-            href="http://localhost:3000"
+            href="/"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
@@ -125,7 +125,7 @@ function ResponsiveAppBar() {
             variant="h5"
             noWrap
             component="a"
-            href="http://localhost:3000"
+            href="/"
             sx={{
               mr: 2,
               display: { xs: 'flex', md: 'none' },

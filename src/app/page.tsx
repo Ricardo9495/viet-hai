@@ -8,11 +8,11 @@ import ImageSlider from "./components/ImageSlider";
 import ToolBar from "./components/ToolBar";
 import Paper from '@mui/material/Paper';
 import { Button, Container, Divider, Grid, Typography, colors } from "@mui/material";
-import { makeStyles } from '@material-ui/core';
 import theme from '@/theme';
 import NewsTab from './components/ProductsTab';
 import Certification from './components/Certification';
 import Footer from './components/Footer';
+import { makeStyles } from '@mui/styles';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',

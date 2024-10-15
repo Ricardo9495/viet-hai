@@ -8,7 +8,7 @@ import Footer from '@/app/components/Footer';
 import AppBar from '@/app/components/AppBar';
 import theme from '@/theme';
 import Paper from '@mui/material/Paper';
-import { makeStyles } from '@material-ui/core';
+import { makeStyles } from '@mui/styles';
 
 
 const useStyles = makeStyles({
@@ -63,7 +63,7 @@ const Page = () => {
           <Divider variant='fullWidth' className={classes.divider}/>
           <br/>
           <Typography variant='h6' component="div" align="left" color={ theme.palette.primary.main}>
-            CHẾ TẠO KẾT CẤU THÉP 
+          GIA CÔNG KẾT CẤU THÉP HỆ DẦM SÀN – KHUNG VƯỢT NHỊP
           </Typography>
           <br/>
           <Typography variant='h6' component="div" align="left" color={ theme.palette.primary.main}>

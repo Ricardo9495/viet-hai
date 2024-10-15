@@ -1,7 +1,7 @@
 import React from "react";
 import { useRef, useEffect } from "react";
 import { Card, Typography,CardMedia } from "@mui/material";
-import { makeStyles } from '@material-ui/core';
+import { makeStyles } from '@mui/styles';
 import Image from 'next/image'
 import { Fab } from "@mui/material";
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';

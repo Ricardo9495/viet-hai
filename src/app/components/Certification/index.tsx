@@ -3,7 +3,7 @@ import * as React from 'react';
 import Image from "next/image";
 import { Paper, Typography, Divider, Button } from '@mui/material';
 import theme from '@/theme';
-import { makeStyles } from '@material-ui/core';
+import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles({
   certification: {
