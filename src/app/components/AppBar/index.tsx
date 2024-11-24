@@ -37,6 +37,10 @@ const pages: Page[] = [
     title: 'Công Trình',
     url: '/cong-trinh',
   },
+  {
+    title: 'Tuyển Dụng',
+    url: '/tuyen-dung',
+  },
   
 ];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
